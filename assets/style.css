@@ -1,0 +1,116 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --text: #2b3440;
+    --muted: #6c757d;
+    --accent: #3498db;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+    --shadow: 0 6px 18px rgba(20,33,61,0.08);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    background: linear-gradient(180deg,var(--bg) 0%, #ffffff 100%);
+    color: var(--text);
+}
+
+.container {
+    padding: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0 0 6px 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 24px;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.kpi-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.kpi-card{
+    background: linear-gradient(180deg,#fbfdff 0%, #ffffff 100%);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.kpi-card h2{
+    font-size: 22px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.kpi-card h4{
+    margin: 0 0 8px 0;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.section-title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.card .subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.table-wrapper{
+    padding-top: 8px;
+}
+
+@media (max-width: 900px){
+    .kpi-row{grid-template-columns: repeat(2, 1fr);}
+    .card .subgrid{grid-template-columns: 1fr;}
+}
+
+/* Datatable styling tweaks */
+.dash-table-container .dash-table {font-family: 'Inter', Arial;}
+
+/* smaller spacing for controls */
+.dcc-dropdown, .DatePickerRange {width: 100%}
+
+/* Footer */
+.footer{color: var(--muted);text-align:center;margin-top: 6px;font-size: 13px}
+
+
+/* Improve look of plotly toolbar in small screens */
+.js-plotly-plot .modebar{opacity:0.9}
